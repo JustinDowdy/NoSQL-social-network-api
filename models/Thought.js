@@ -31,6 +31,7 @@ const ReactionSchema = new Schema(
 	}
 );
 
+// ThoughtsSchema
 const ThoughtSchema = new Schema(
 	{
 		thoughtText: {
@@ -48,6 +49,7 @@ const ThoughtSchema = new Schema(
 			type: String,
 			required: true,
 		},
+        //Use ReactionsSchema to validate data
 		reactions: [ReactionSchema],
 	},
 	{
@@ -58,11 +60,12 @@ const ThoughtSchema = new Schema(
 		id: false,
 	}
 );
-
+//gets total count of reactions
 ThoughtSchema.virtual('reactionCount').get(function () {
 	return this.reactions.length;
 });
-
+// Thoughts model
 const Thought = model('Thought', ThoughtSchema);
 
+//export through thoughts module
 module.exports = Thought;

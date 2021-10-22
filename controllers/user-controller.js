@@ -33,14 +33,7 @@ const userController = {
 			});
 	},
 
-	// POST /api/users
-	createUser({ body }, res) {
-		User.create(body)
-			.then((dbUserData) => res.json(dbUserData))
-			.catch((err) => res.status(400).json(err));
-	},
-
-	// PUT /api/users/:id
+    	// PUT /api/users/:id
 	updateUser({ params, body }, res) {
 		User.findOneAndUpdate({ _id: params.id }, body, {
 			new: true,
@@ -80,6 +73,13 @@ const userController = {
 					})
 					.catch((err) => res.status(400).json(err));
 			})
+			.catch((err) => res.status(400).json(err));
+	},
+
+    	// POST /api/users
+	createUser({ body }, res) {
+		User.create(body)
+			.then((dbUserData) => res.json(dbUserData))
 			.catch((err) => res.status(400).json(err));
 	},
 

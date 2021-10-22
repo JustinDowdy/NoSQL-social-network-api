@@ -1,5 +1,7 @@
+//require express router
 const router = require('express').Router();
 
+//grab thoughts-controller and set requirements for them
 const {
 	getAllThoughts,
 	getThoughtById,
@@ -19,5 +21,5 @@ router
 	.delete(deleteThought);
 
 router.route('/:thoughtId/reactions/').post(addReaction).delete(deleteReaction);
-
+//export router through module
 module.exports = router;

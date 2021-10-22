@@ -1,3 +1,4 @@
+//require express & mongoose
 const express = require('express');
 const mongoose = require('mongoose');
 
@@ -7,6 +8,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+//Connect to mongoose
 mongoose.connect(
 	process.env.MONGODB_URI || 'mongodb://localhost/social-network-api',
 	{
