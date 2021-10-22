@@ -1,0 +1,27 @@
+{
+  "name": "18.-nosql",
+  "version": "1.0.0",
+  "description": "a social netword web app where users can share thoughts, react to friends' thoughts, and make friends. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinDowdy/social-network-api.git"
+  },
+  "keywords": [
+    "nosql"
+  ],
+  "author": "Justin Dowdy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustinDowdy/social-network-api/issues"
+  },
+  "homepage": "https://github.com/JustinDowdy/social-network-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  }
+}
